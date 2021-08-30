@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        *{
+            font-size: 20px;
+            margin: 0;
+        }
+        body{
+            box-sizing: content-box;
+        }
+        .menu{
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(119, 172, 172);
+        }
+        .left-menu,.right-menu{
+            display: flex;
+        }
+        .item{
+          padding: 20px;
+        }
+        .item:hover{
+          background: rgb(197, 107, 107);
+        }
+        @media (min-width: 700px) and (max-width: 1050px) {
+  .left-menu {
+    flex-grow: 5;
+  }
+
+  .right-menu {
+    flex-grow: 2;
+  }
+  
+  .item {
+    flex-grow: 1;
+    width: 50px; /* can delete width */
+
+  }
+}
+    </style>
+</head> 
+<body>
+    <!-- <div class="menu">
+        <div class="left-menu">
+            <li>Home</li>
+            <li>Couse</li>
+            <li>Blog</li>
+            <li>Contact</li>
+            <li>About</li>
+        </div>
+        <div class="right-menu">
+            <li>Login</li>
+            <li>Sign up</li>
+        </div>
+    </div> -->
+    <div class="menu">
+        <div class="left-menu">
+          <div class="item">Home</div>
+          <div class="item">Course</div>
+          <div class="item">Blog</div>
+          <div class="item">Contact</div>
+          <div class="item">About</div>
+        </div>
+        <div class="right-menu">
+          <div class="item">Login</div>
+          <div class="item">Sign up</div>
+        </div>
+      </div>
+</body>
+</html>
